@@ -1,0 +1,10 @@
+# sqlite3
+/zooey_deschanel/db.sqlite3
+
+# python
+*.py[cod]
+*.pyc
+__pycache__
+
+# virtual environments
+/.vagrant

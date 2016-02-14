@@ -1,0 +1,6 @@
+[run]
+omit = ../*migrations*
+
+[html]
+directory = ashleylocom/tests/report
+title = ashleylocom report
