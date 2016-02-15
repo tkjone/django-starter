@@ -1,5 +1,5 @@
 {
-    "repo_name": "django_starter",
+    "repo_name": "my_project",
     "project_name": "src",
     "repo_root_path": "/home/vagrant/{{cookiecutter.repo_name}}",
     "project_root_path": "/home/vagrant/{{cookiecutter.repo_name}}/{{cookiecutter.project_name}}",

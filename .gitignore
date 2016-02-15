@@ -19,6 +19,9 @@
 # sftp configuration file
 sftp-config.json
 
+# Vagrant
+/.vagrant
+
 # Generated files
 *.log
 *.pot

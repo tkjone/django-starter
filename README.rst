@@ -37,7 +37,7 @@ Quick Start
 
        cookiecutter https://github.com/tkjone/django-starter.git
 
-You are going to be prompted to answer some questions about your project and the answers you provide are used build and configure your it.  If you leave a question blank, Cookiecutter will use the default answer in the square brackets.
+You are going to be prompted to answer some questions about your project and the answers you provide are used build and configure your it.  These questions are called `prompts`  If you leave a `prompts` blank, Cookiecutter will use the default answer in the square brackets.  For a list of the prompts used by this template, pleasse see the rompts documentation
 
 For example, let us pretend your a huge fan of Taye Diggs and you want to make a website celebrating his life.  This is how that would look:
 
