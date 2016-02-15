@@ -37,7 +37,7 @@ Quick Start
 
        cookiecutter https://github.com/tkjone/django-starter.git
 
-You are going to be prompted to answer some questions about your project and the answers you provide are used build and configure your it.  These questions are called `prompts`  If you leave a `prompts` blank, Cookiecutter will use the default answer in the square brackets.  For a list of the prompts used by this template, pleasse see the rompts documentation
+You are going to be prompted to answer some questions about your project and the answers you provide are used build and configure your it.  These questions are called `prompts`  If you leave a `prompts` blank, Cookiecutter will use the default answer in the square brackets.  For a list of the prompts used by this template, pleasse see the `prompts documentation`_
 
 For example, let us pretend your a huge fan of Taye Diggs and you want to make a website celebrating his life.  This is how that would look:
 
@@ -124,5 +124,6 @@ Branches
 This repo's branches correspond to the version of Django being used.  This project will always default to the latest version of Django and the branches will follow the `django roadmap`_.  Thus, the next branch will be `django-starter-1.10.x`
 
 .. _django roadmap: https://www.djangoproject.com/weblog/2015/jun/25/roadmap/
+.. _prompts documentation: https://github.com/tkjone/django-starter/blob/django-starter-1.9.x/docs/prompts.rst
 
 
