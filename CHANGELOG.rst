@@ -16,6 +16,9 @@ All enhancements and patches to cookiecutter-django will be documented in this f
 
 * added `.vagrant` to the `.gitignore`
 * `README.rst` - updated the quickstart to reference the new `prompts.rst` file
+* common.py - removed STATIC_ROOT
+* prod.py - added STATIC_ROOT
+* dev.py - added different location for STATIC_DIRS
 
 
 [2016-02-14]
