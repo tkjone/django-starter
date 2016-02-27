@@ -4,6 +4,13 @@ Change Log
 
 All enhancements and patches to cookiecutter-django will be documented in this file. This project adheres to `Semantic Versioning`_.
 
+[2016-02-27]
+============
+
+**Changed**
+
+* .gitignore - updated to include a more detailed list of files and directories that git should ignore.
+
 [2016-02-15]
 ============
 
