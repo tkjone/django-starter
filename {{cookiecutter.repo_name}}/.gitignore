@@ -28,7 +28,7 @@ node_modules/
 
 {% if cookiecutter.db_engine == "sqlite" -%}
 # sqlite3
-/myproject/db.sqlite3
+{{cookiecutter.repo_root_path}}db.sqlite3
 {% endif %}
 
 # python
