@@ -17,5 +17,6 @@
     "domain_name": "example.com",
     "license": ["MIT", "Apache", "GPLv3", "No License" ],
     "current_year": "2015",
-    "full_legal_name_of_project_owner": ""
+    "full_legal_name_of_project_owner": "",
+    "use_celery": ["no", "yes"]
 }
