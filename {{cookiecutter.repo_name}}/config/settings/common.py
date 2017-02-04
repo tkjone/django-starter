@@ -179,7 +179,7 @@ ROOT_URLCONF = 'config.urls'
 # ------------------------------------------------------------------------------
 
 ADMINS = (
-    ("""{{cookiecutter.author_name}}""", '{{cookiecutter.email}}'),
+    ("""{{cookiecutter.author_name}}""", '{{cookiecutter.author_email}}'),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
