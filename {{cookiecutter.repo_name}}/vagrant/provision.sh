@@ -11,10 +11,8 @@ virtualenv_dir="{{ cookiecutter.virtualenv_dir_path }}"
 db_engine="{{cookiecutter.db_engine}}"
 db_user="{{cookiecutter.db_user}}"
 db_password="{{cookiecutter.db_password}}"
-db_host="{{cookiecutter.db_host}}"
 db_name="{{cookiecutter.db_name}}"
 os_user="{{cookiecutter.os_user}}"
-python_2="/usr/bin/python"
 python_3="/usr/bin/python3"
 software=(
     "python-pip"
@@ -80,6 +78,7 @@ source /home/vagrant/.profile
 
 
 {% if cookiecutter.db_engine == "postgres" -%}
+
 #-------------------------------------------------------------
 # SETUP DATABASE
 #-------------------------------------------------------------
@@ -93,10 +92,6 @@ expect ${repo_dir}/vagrant/expects/set_db.exp ${db_name} ${db_user} ${db_passwor
 # CREATE VIRTUAL ENVIRONMENTS
 #-------------------------------------------------------------
 
-# INFO: initialize virtualenvironment - Python 2
-logit "Creating ${repo_name} Python 2 virtual environment"
-mkvirtualenv -r ${django_reqs} ${repo_name}2
-
 # INFO: initialize virtualenvironment - Python 3
 logit "Creating ${repo_name} Python 3 virtual environment..."
 mkvirtualenv -r ${django_reqs} --python=${python_3} ${repo_name}3
@@ -109,7 +104,7 @@ cat << EOF >> ${virtualenv_dir}/postactivate
     export DJANGO_SETTINGS_MODULE="config.settings.dev"
 EOF
 
-# remove django_settings_module when user deactivate virtualenv
+# remove django_settings_module when user deactivates virtualenv
 logit "Configuring postdeactivate hook for virtualenv..."
 cat << EOF >> ${virtualenv_dir}/postdeactivate
     # unset project environment variables
