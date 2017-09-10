@@ -4,6 +4,27 @@ Change Log
 
 All enhancements and patches to cookiecutter-django will be documented in this file. This project adheres to `Semantic Versioning`_.
 
+[2017-09-10]
+============
+
+**Dependencies**
+
+* Upgrade Django to 1.11 from 1.9
+
+**Improved**
+
+* README section gotchas
+* Logging settings
+
+**Added**
+
+* Add README
+* Django-debug toolbar
+
+**Removed**
+
+* Docs directory - too opinionated
+
 [2016-02-27]
 ============
 
