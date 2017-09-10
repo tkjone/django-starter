@@ -1,5 +1,5 @@
-django>=1.9,<1.10
-django-environ>=0.4.0
+django>=1.11, <1.12
+django-environ>=0.4.3
 
 {% if cookiecutter.db_engine == "postgres" -%}
 
