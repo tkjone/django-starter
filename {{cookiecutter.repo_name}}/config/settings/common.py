@@ -84,7 +84,7 @@ DEBUG = env.bool("DJANGO_DEBUG", default=True)
 {% if cookiecutter.db_engine == "postgres" -%}
 
 DATABASES = {
-    'default': env.db("DATABASE_URL", default="{{cookiecutter.db_engine}}://{{cookiecutter.db_user}}:{{cookiecutter.db_password}}@{{cookiecutter.db_host}}/{{cookiecutter.db_name}}")
+    'default': env.db("DATABASE_URL", default="postgres://{{cookiecutter.db_user}}:{{cookiecutter.db_password}}@{{cookiecutter.db_host}}/{{cookiecutter.db_name}}")
 }
 
 {%- else -%}
@@ -116,7 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.bool("DJANGO_ALLOWED_HOSTS", default=['*'])
 
 # ------------------------------------------------------------------------------
 # TEMPLATE CONFIGURATION
@@ -222,31 +222,30 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
+            'formatter': 'simple',
         },
-        'file_error': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
+        'log_file': {
+            'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': LOG_DIR + 'error.log',
+            'filename': LOG_DIR + 'django.log',
             'maxBytes': 20 * 1024 * 1024,
             'formatter': 'verbose'
         },
     },
     'loggers': {
+        'apps': {
+            'handlers': ['log_file', 'console', ],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
         'django.request': {
-            'handlers': ['file_error', 'mail_admins', ],
-            'level': 'ERROR',
+            'handlers': ['log_file', 'mail_admins', ],
+            'level': 'INFO',
             'propagate': True
         },
         'django.security.DisallowedHost': {
-            'level': 'ERROR',
-            'handlers': ['file_error', 'console', 'mail_admins', ],
-            'propagate': True
-        },
-        'development': {
-            'handlers': ['console', ],
-            'level': 'DEBUG',
+            'level': 'INFO',
+            'handlers': ['log_file', 'console', 'mail_admins', ],
             'propagate': True
         },
     },
